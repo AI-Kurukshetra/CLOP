@@ -53,6 +53,7 @@ Set these values in `.env.local`:
 
 ```bash
 npm run seed
+npm run seed:rich
 ```
 
 6. Start the app:
@@ -75,4 +76,26 @@ Open `http://localhost:3000`.
 - `npm run start` - run production server
 - `npm run lint` - run ESLint
 - `npm run seed` - insert demo users/products/applications
+- `npm run seed:rich` - add larger realistic demo dataset for dashboards
 - `npm run verify:supabase` - verify demo auth + RLS table access
+
+## Vercel Deployment
+
+Set these environment variables in Vercel (Production + Preview):
+
+- `NEXT_PUBLIC_SUPABASE_URL`
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+- `SUPABASE_SERVICE_ROLE_KEY`
+
+Recommended Vercel build settings:
+
+- Install Command: `npm install`
+- Build Command: `npm run build`
+- Output Directory: `.next`
+- Start Command: `npm run start` (used for local production parity; Vercel handles runtime)
+
+Notes:
+
+- No extra system packages are required.
+- Do not run `npm run seed` or `npm run seed:rich` in Vercel build.
+- Run seed commands locally against your Supabase project when you want demo data refreshed.

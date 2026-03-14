@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "seed": "node --import tsx scripts/seed.ts",
+    "seed:rich": "node --import tsx scripts/seedRichData.ts",
     "verify:supabase": "node --import tsx scripts/verifySupabase.ts"
   },
   "dependencies": {
