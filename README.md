@@ -42,6 +42,7 @@ Set these values in `.env.local`:
 
 - Open your Supabase SQL editor
 - Run `scripts/schema.sql`
+- If your project already had older policies, also run `scripts/fix_profiles_rls.sql`
 
 4. Create storage bucket:
 
@@ -74,3 +75,4 @@ Open `http://localhost:3000`.
 - `npm run start` - run production server
 - `npm run lint` - run ESLint
 - `npm run seed` - insert demo users/products/applications
+- `npm run verify:supabase` - verify demo auth + RLS table access

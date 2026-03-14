@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "seed": "node --import tsx scripts/seed.ts"
+    "seed": "node --import tsx scripts/seed.ts",
+    "verify:supabase": "node --import tsx scripts/verifySupabase.ts"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.15",
